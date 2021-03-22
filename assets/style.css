@@ -1,0 +1,754 @@
+/*------------------------------------General Styles: body /containers /hr/---------------------------*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    letter-spacing: 1px;
+    background: #f4f5f9;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 5px solid rgba(0,0,0,.1);
+    width: 50%;
+    border-radius: 50%;
+}
+
+.link {
+    color: #B22222;
+    text-transform: capitalize;
+}
+
+.link:hover {
+    color: #DC143C;
+}
+
+/*-------------------------------------------- Navbar--------------------------------------------- */
+
+/* Navbar logo with link to home */
+.smaller-image {
+    width: 90px; 
+    height: auto;
+}
+
+/* I added a border to the bottom of nav bar to make it stand out on lighter backgrounds */
+.navbar-light {
+    border-bottom: 1px solid #a9a9a9;
+}
+
+/*------------------------------------------- Home Page------------------------------------------- */
+
+/* Home page hero images caraousel */
+/* I used linear-gradient on hero images to darken slightly and allow my h1 text to pop out more */
+.hero-home {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.10),
+      rgba(0, 0, 0, 0.10)
+    ),  url(../images/recoil-hero-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    margin-top: 55px;
+}
+
+/* Image one carousel responsive */
+@media(max-width: 768px) {
+    .hero-home {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: fit-content;
+    margin-top: 55px;
+    }
+    .btn-lg {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Two call to action buttons on Home hero image on screens 280px looked too cluttered so I removed one in this media query .home-learn */
+@media(max-width: 280px) {
+    .hero-home {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: fit-content;
+    margin-top: 55px;
+    }
+    #home .home-learn {
+        display: none;
+    }
+    .hero-title {
+        font-size: 25px !important;
+    }
+}
+
+.hero-2 {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.10),
+      rgba(0, 0, 0, 0.10)
+    ), url(../images/recoil-hero-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    margin-top: 55px;
+}
+
+/* Image 2 carousel responsive */
+@media(max-width: 768px) {
+    .hero-2 {
+        background: linear-gradient(
+      rgba(0, 0, 0, 0.10),
+      rgba(0, 0, 0, 0.10)
+    ), url(../images/recoil-hero-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: fit-content;
+    margin-top: 70px;
+    }
+    .carousel-indicators li {
+        display: none;
+    }
+    .carousel-control-next {
+        display: none;
+    }
+    .carousel-control-prev {
+        display: none;
+    }
+    .btn-hero {
+        font-size: 18px !important;
+    }
+}
+
+.hero-3 {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.10),
+      rgba(0, 0, 0, 0.10)
+    ), url(../images/recoil-hero-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    margin-top: 55px;
+}
+
+/* Image 3 carousel responsive */
+@media(max-width: 768px) {
+    .hero-3 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: fit-content;
+    margin-top: 55px;
+    }
+}
+
+/*--------------------------------Hero Image Titles and CTA Buttons------------------------*/
+
+/* Hero image titles */
+/* I added text-shadow to my h1 titles to help give a 3d effect */
+.hero-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    padding-top: 265px;
+    color: white;
+    font-size: 55px;
+    font-weight: bold;
+    text-transform: capitalize;
+    -webkit-animation-name: hero-zoom;
+    animation-name: hero-zoom;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; 
+    text-shadow: 0 2px 0 black; 
+}
+
+/* Hero image H1 titles animation */
+@keyframes hero-zoom {
+  from {
+    transform: scale(.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Hero images CTA buttons */
+.btn-outline-light {
+    color: #fff;
+    border: 2px solid white;
+    background-color: #B22222;
+    margin-left: 0px;
+    margin-right: 5px;
+    margin-top: 55px;
+    border-radius: 25px;
+}
+
+.btn-outline-light:hover {
+    background-color: #DC143C;
+    border-color: #414a4c;
+}
+
+.hero-cta {
+    text-align: center;
+}
+
+/*------------------------------------Paragraph Headings and Text--------------------------------- */
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-top: 55px;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Paragraph text */
+p {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 55px;
+    font-weight: 600;
+    font-family: 'Mulish', sans-serif;
+    color: #0e1111;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* ---------------------------------------Video Section ------------------------------------------*/
+.watch-now {
+    background: #f8f8ff;
+}
+
+.video-title {
+    margin-bottom: 55px;
+}
+
+.live-vid {
+    max-width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    box-shadow: 10px 5px 5px #a9a9a9; 
+}
+
+/* ----------------------------------------------About Us Section --------------------------------*/
+
+/* About Us hero image title */
+.about-title {
+    margin-bottom: 50px;
+}
+
+/* About Us CTA */
+.about-us .btn {
+     margin-bottom: 50px;
+}
+
+/* Next show sticker text */
+#cover-text, #cover-text h2 {
+  color: #ffffff;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Next Show sticker background */
+#cover-text {
+    letter-spacing: 4px;
+    width: 300px;
+    height: 236px;
+    background-color: rgba(167, 45, 42, 0.7);
+    bottom: 30px;
+    right: 100px;
+    position: static;
+    left: 0px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* About Us hero image */
+.hero-about { 
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.10),
+      rgba(0, 0, 0, 0.10)
+    ), url(../images/recoil-about-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 650px;
+    margin-top: 100px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+/* About Us hero image responsive */
+@media(max-width: 768px) {
+    .hero-about {
+        background: url(../images/recoil-about-hero.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 650px;
+        margin-top: 100px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        background-size: contain;
+    }
+    #cover-text {
+        width: 100%;
+        height: 155px;
+        background-color: rgb(167, 45, 42);
+        position: relative;
+    }
+    .hero-about .hero-cta {
+        padding-top: 15px;
+    }
+}
+
+@media(max-width: 576px) {
+    .hero-about {
+        background-size: contain;
+    }
+    .hero-title {
+        font-size: 30px;
+        padding-top: 155px;
+        text-shadow: 0 1px 0 black;
+    }
+    #home .hero-title {
+        margin-bottom: 0px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3, h4, h5 {
+        font-size: 25px !important;
+    }
+    .about-us .btn {
+        margin-bottom: 0;
+    }
+    #cover-text {
+        margin-top: -55px;
+        height: 175px;
+        width: 300px;
+        position: static;
+        background-color: rgba(167, 45, 42, 0.7);
+    }
+    .book-us {
+        margin-top: 0px;
+    }
+}
+
+@media(max-width: 360px) {
+    .hero-title {
+        margin-bottom: 70px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+
+    #cover-text {
+        height: 175px;
+    }
+}
+ 
+/* ----------------------------------Meet the Band Profiles Section ------------------------------*/
+
+.band-profiles {
+    background: #f8f8ff;
+    margin-top: 55px;
+}
+
+/* Title */
+.meet {
+    margin-bottom: 55px;
+}
+
+.profile-icon {
+    font-size: 35px;
+}
+
+/* Profiles border box */
+.band {
+    border: 1px solid black;
+    margin: 20px 20px 55px 20px;
+    background: #f8f8ff;
+    box-shadow: 10px 5px 5px #a9a9a9;
+}
+
+.band h2 {
+    margin-top: 25px;
+}
+
+/* Band profiles responsive heading and icons */
+/* font awesome icons looked better with display: block on smaller screens */
+@media(max-width:576px) {
+    h2 i {
+        display: block !important;
+        text-align: center;
+        padding: 25px;
+    }
+}
+
+.band p {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+/* Meet the band profile images */
+.profile-1 {
+    background: url(../images/chris2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 5px 5px #a9a9a9;
+}
+
+.profile-2 {
+    background: url(../images/conan2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 5px 5px #a9a9a9;
+    padding-right: 15px !important; 
+    padding-left: 15px !important;
+}
+
+.profile-3 {
+    background: url(../images/joe.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 5px 5px #a9a9a9;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+
+.profile-4 {
+    background: url(../images/nathan.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 5px 5px #a9a9a9;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+
+.profile-5 {
+    background: url(../images/johnny2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 5px 5px #a9a9a9;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+ 
+/* Meet the band profile images responsive */
+@media(max-width: 1024px) {
+    .profile-1,
+    .profile-2,
+    .profile-3,
+    .profile-4,
+    .profile-5 {
+        min-height: 270px !important;
+    }
+}
+
+@media(max-width: 768px) {
+    .profile-1,
+    .profile-2,
+    .profile-3,
+    .profile-4,
+    .profile-5 {
+        min-height: 264px !important;
+    }
+    .profile-1,
+    .profile-3 {
+        background-position: right;
+    }
+}
+
+@media(max-width: 576px) {
+    .profile-1,
+    .profile-2,
+    .profile-3,
+    .profile-4,
+    .profile-5 {
+        min-height: 255px !important;
+    }
+}
+
+@media(max-width: 360px) {
+    .profile-1,
+    .profile-2,
+    .profile-3,
+    .profile-4,
+    .profile-5 {
+        min-height: 210px !important;
+    }
+}
+
+@media(max-width: 280px) {
+    .profile-1,
+    .profile-2,
+    .profile-3,
+    .profile-4,
+    .profile-5 {
+        min-height: 165px !important;
+    }
+}
+
+/* Meet the band profiles text */
+.profile-text  {
+    margin-left: auto;
+    margin-right: auto;
+    margin: 20px;
+}
+
+/* ------------------------------------Contact Us Section ----------------------------------------*/
+ 
+/* Contact Us hero image */
+.hero-contact {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.10),
+      rgba(0, 0, 0, 0.10)
+    ), url(../images/recoil-couple.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 750px;
+    margin-top: 55px;
+}
+
+/* Contact Us hero image responsive */
+@media(max-width: 768px) {
+    .hero-contact {
+        background-size: cover;
+        min-height: fit-content;
+    }
+    .hero-contact .hero-cta {
+        padding-bottom: 15px;
+    }
+}
+
+@media(max-width: 576px) {
+    .hero-contact {
+        background-size: cover;
+        min-height: fit-content;
+        margin-top: 0px;
+    }
+    .hero-contact .hero-cta {
+        margin-top: 55px;
+        padding-top: 55px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+/*-----------------------------------------Contact Form---------------------------------------*/
+
+/* Contact form headings */
+h3, h5 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 10px;
+}
+
+.bg-color-contact {
+    background: linear-gradient(
+      rgba(0, 0, 0, .09),
+      rgba(0, 0, 0, .09)
+    ), url(../images/spotlight.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    margin: 20px;
+    box-shadow: 10px 5px 5px #a9a9a9;
+}
+
+/* Contact form responsive */
+@media(max-width:768px) {
+    .bg-color-contact {
+    background: #f8f9fa;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    margin: 20px;
+    box-shadow: 10px 5px 5px #a9a9a9;
+}
+}
+
+.center-form {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}
+
+@media(min-width: 992px) {
+.center-form {
+    max-width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}
+}
+
+/* Contact form CTA */
+.btn-secondary {
+    margin: 25px;
+    color: #fff;
+    border: 2px solid white;
+    background-color: #B22222;
+    border-radius: 25px;
+}
+
+.btn-secondary:hover {
+    background-color: #DC143C;
+    border-color: #414a4c;
+    color: #414a4c;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+/*--------------------------------------- Why Us Section----------------------------------------- */
+
+.why-us { 
+background: #f8f8ff;
+}
+
+h4 {
+    font-family: 'Mulish', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 55px;
+}
+
+/* Why Us responsive */
+@media(max-width:576px) {
+    h4 i {
+        display: block !important;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+/* -----------------------------------------------Footer -----------------------------------------*/
+
+footer {
+    background-color: #f8f9fa;
+    min-height: 120px;
+    margin: 0;
+    padding-bottom: 15px;
+    border-top: 1px solid #a9a9a9;;
+}
+
+footer h4 {
+    margin: 25px;
+}
+
+.inline-block {
+    display: inline-block
+}
+
+.social-links {
+    padding: 15px;
+    text-align: center;
+}
+
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+   
+    color: #fafafa;
+    background: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    box-shadow: 10px 5px 5px #a9a9a9;
+}
+
+.social-links li a i:hover {
+    background-color: #212529;
+}
+
+.footer .links li a {
+    color: black;
+    transition: color 0.2s;
+}
+
+.footer .links li a:hover {
+    color: #DC143C;
+}
+
+.footer .location i {
+    font-size: 18px;
+}
+
+.location li a i {
+    color: black;
+    transition: color 0.2s;
+}
+
+.location li a i:hover {
+    color: #DC143C;
+}
+
+.footer .copyright {
+    font-size: 1.3rem;
+    text-shadow: .5px .5px #a9a9a9; 
+    border-top: 1px solid #a9a9a9;
+    border-bottom: 1px solid #a9a9a9;
+    margin: 5px;
+}
+
+footer .copy-right {
+    margin: 15px;
+}
